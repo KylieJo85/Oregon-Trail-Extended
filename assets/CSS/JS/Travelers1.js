@@ -27,3 +27,9 @@ eat() {
 
 }
 }
+
+class Doctor extends Traveler{
+    constructor(){
+
+    }
+}
