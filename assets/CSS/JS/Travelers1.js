@@ -1,35 +1,59 @@
 //Thank you to Doug, Cynthia, Lesa, and Colin for reminding me to have two separate files for each class (travelers and wagons.)
 
-class Traveler{
-    constructor(name){
-    this.name=name
-    this.food=1
-    this.isHealthy=true
+class Traveler {
+    constructor(name) {
+        this.name = name
+        this.food = 1
+        this.isHealthy = true
     }
 
 
-hunt() {
-    this.food+=2
-    
-    
+    hunt() {
+        this.food += 2
+
+
+    }
+
+    eat() {
+
+        if (this.food > 0) {
+            this.food -= 1
+
+        }
+        else {
+            this.isHealthy = false
+        }
+
+
+    }
 }
 
-eat() {
-    
-    if(this.food>0){
-       this.food-=1
-     
+class Doctor extends Traveler {
+    constructor(name) {
+        super(name)
     }
-    else{
-        this.isHealthy=false
+
+    heal(traveler){
+
+        
     }
-   
 
 }
+
+class Hunter extends Traveler{
+    constructor() {
+        super()
+    }
 }
 
-class Doctor extends Traveler{
-    constructor(){
+hunt(){
 
-    }
+}
+
+eat(){
+
+}
+
+giveFood(traveler,numOfFoodUnits){
+
 }
