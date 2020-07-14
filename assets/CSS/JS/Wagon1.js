@@ -18,14 +18,15 @@ this.passengers.push(traveler)
 
 
 shouldQuarantine(){
-this.passengers.some(traveler=>traveler.isWell===false)
+ return this.passengers.some(traveler=>traveler.isHealthy===false)
+ 
 
 }
 
 
 
 totalFood(){
-this.passengers.reduce((totalAmountOfFood,sharedAmongPassengers)=>totalAmountOfFood+sharedAmongPassengers.food,0)
+ return this.passengers.reduce((totalAmountOfFood,sharedAmongPassengers)=>totalAmountOfFood+sharedAmongPassengers.food,0)
 }
 
 
